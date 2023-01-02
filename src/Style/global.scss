@@ -187,7 +187,7 @@ body {
 
 section {
   position: relative;
-  padding: 90px 0 0 0;
+  padding: 90px 0;
   overflow: hidden;
   @include media("<phone"){
     padding: 50px 0;
