@@ -1,0 +1,81 @@
+.socialLink {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.socialLink li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.socialLink li a {
+  color: #2a8a6a;
+  display: block;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 14px;
+}
+
+.socialLink li a:hover {
+  opacity: 0.6;
+}
+
+.card {
+  border: none;
+}
+
+.card .img_box {
+  width: 100%;
+  position: relative;
+}
+
+.card .img_box:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2a8a6a;
+  z-index: 0;
+  opacity: 0;
+}
+
+.card .img_box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card .img_box .qoute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+  color: #fff;
+  opacity: 0;
+}
+
+.card:hover .img_box:after {
+  opacity: 0.6;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+.card:hover .img_box .qoute {
+  opacity: 1;
+  -webkit-transition: all ease-in-out 0.6s 0.2s;
+  transition: all ease-in-out 0.6s 0.2s;
+}
+
+.card:hover h5 {
+  color: #2a8a6a;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+/*# sourceMappingURL=index.module.css.map */

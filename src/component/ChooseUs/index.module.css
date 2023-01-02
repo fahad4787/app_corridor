@@ -1,0 +1,25 @@
+.list {
+  padding: 20px 0;
+  list-style: none;
+}
+
+.list li {
+  position: relative;
+  padding-left: 15px;
+}
+
+.list li::after {
+  position: absolute;
+  content: "";
+  left: -10px;
+  right: 0;
+  top: 5px;
+  bottom: 0;
+  width: 15px;
+  height: 8px;
+  border-bottom: 3px solid #2a8a6a;
+  border-left: 3px solid #2a8a6a;
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+}
+/*# sourceMappingURL=index.module.css.map */

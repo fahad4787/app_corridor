@@ -1,0 +1,27 @@
+.sectin_title {
+  text-align: center;
+  h2{
+    font-weight: 600;
+  }
+  span {
+    color: #2a8a6a;
+  }
+
+  p{
+    color: #abafb8;
+    font-size: 18px;
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 667px) {
+  h2{
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  h2{
+    font-size: 18px;
+  }
+}

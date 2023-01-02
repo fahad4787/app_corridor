@@ -1,0 +1,18 @@
+.sectin_title {
+  text-align: center;
+}
+
+.sectin_title h2 {
+  font-weight: 600;
+}
+
+.sectin_title span {
+  color: #2a8a6a;
+}
+
+.sectin_title p {
+  color: #abafb8;
+  font-size: 18px;
+  margin: 10px 0;
+}
+/*# sourceMappingURL=index.module.css.map */

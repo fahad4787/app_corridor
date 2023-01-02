@@ -1,0 +1,32 @@
+.statsCard {
+  padding: 80px 0;
+  text-align: center;
+  width: 85%;
+  margin: 50px auto;
+  border-top: 3px solid #2a8a6a;
+  -webkit-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+
+.statsCard:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+
+.statsCard:hover p {
+  color: #2a8a6a;
+}
+
+.statsCard h1 {
+  color: #2a8a6a;
+}
+
+.statsCard p {
+  font-size: 20px;
+  color: #b1b1b1;
+  font-weight: 500;
+  margin: 0;
+}
+/*# sourceMappingURL=index.module.css.map */

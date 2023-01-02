@@ -1,0 +1,25 @@
+.statsCard {
+    padding: 80px 0;
+    text-align: center;
+    width: 85%;
+    margin: 50px auto;
+    border-top: 3px solid #2a8a6a;
+    transition: all linear 0.3s;
+    &:hover{
+      transform: translateY(-10px);
+      transition: all linear 0.3s;
+
+      p{
+        color: #2a8a6a;
+      }
+    }
+  h1 {
+    color: #2a8a6a;
+  }
+  p {
+    font-size: 20px;
+    color: #b1b1b1;
+    font-weight: 500;
+    margin: 0;
+  }
+}

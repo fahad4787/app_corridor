@@ -1,0 +1,57 @@
+.footer {
+  padding: 90px 0;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: block;
+      a {
+        font-size: 18px;
+        text-decoration: none;
+        color: #000;
+        line-height: 25px;
+        margin: 15px 0;
+        display: block;
+        position: relative;
+        transition: all ease-in-out 0.3s;
+        &::after {
+          position: absolute;
+          content: "";
+          left: -12px;
+          top: 12px;
+          width: 0;
+          height: 2px;
+          background: #2a8a6a;
+          transition: all ease-in-out 0.3s;
+        }
+        &:hover {
+          color: #2a8a6a;
+          padding-left: 12px;
+          transition: all ease-in-out 0.3s;
+          &:after {
+            width: 12px;
+            transition: all ease-in-out 0.3s;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 676px) {
+  .footer {
+    padding: 50px 0;
+    text-align: center;
+
+    ul {
+      li {
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.card {
+  padding: 30px 0;
+  text-align: center;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-transition: all ease-in-out 0.6s;
+  transition: all ease-in-out 0.6s;
+  -webkit-box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, 0.15);
+  gap: 10px;
+}
+
+.card:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  border-top: 3px solid #2a8a6a;
+  -webkit-transition: all ease-in-out 0.6s;
+  transition: all ease-in-out 0.6s;
+}
+
+.card:hover h6 {
+  color: #2a8a6a;
+}
+
+.card h6 {
+  color: #6c6c6c;
+  margin: 0;
+}
+
+.card span {
+  font-size: 22px;
+  color: #2a8a6a;
+}
+/*# sourceMappingURL=index.module.css.map */
