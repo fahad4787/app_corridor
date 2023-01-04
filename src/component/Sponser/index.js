@@ -16,7 +16,7 @@ import img10 from "../../Images/comp10.png";
 const Sponser = () => {
   const settings = {
     dots: false,
-    arrow: true,
+    arrows: false,
     infinite: true,
     speed: 1000,
     autoplay: true,

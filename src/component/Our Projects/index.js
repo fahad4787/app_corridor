@@ -10,7 +10,7 @@ import SectionTitle from "../SectionTitle";
 const OurProjects = () => {
   const settings = {
     dots: false,
-    arrow: true,
+    arrows: false,
     infinite: true,
     speed: 1000,
     autoplay: true,
