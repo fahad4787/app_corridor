@@ -1,21 +1,27 @@
 .list {
     padding: 20px 0;
   list-style: none;
+  line-height: 25px;
+  font-size: 16px;
   li {
     position: relative;
     padding-left: 15px;
-    &::after {
+    p{
+      margin-bottom: 5px;
+    }
+    &:after {
       position: absolute;
       content: "";
-      left: -5px;
+      left: -3px;
       right: 0;
-      top: 5px;
+      top: 3px;
       bottom: 0;
-      width: 15px;
+      width: 12px;
       height: 8px;
       border-bottom: 3px solid #2a8a6a;
       border-left: 3px solid #2a8a6a;
       transform: rotate(-35deg);
+  
     }
   }
 }

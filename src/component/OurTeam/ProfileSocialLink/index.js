@@ -1,12 +1,13 @@
 import React from 'react'
+import { NavLink } from 'react-bootstrap'
 import classes from '../index.module.scss'
 
 const ProfileSocialLink = () => {
   return (
     <ul className={classes.socialLink}>
-    <li><a className='shadow' href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-    <li><a className='shadow' href="#"><i class="fa-brands fa-twitter"></i></a></li>
-    <li><a className='shadow' href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+    <li><NavLink to="#" className='shadow'><i class="fa-brands fa-facebook-f"></i></NavLink></li>
+    <li><NavLink to="#" className='shadow'><i class="fa-brands fa-twitter"></i></NavLink> </li>
+    <li><NavLink to="#" className='shadow'><i class="fa-brands fa-linkedin-in"></i></NavLink></li>
     </ul>
   )
 }

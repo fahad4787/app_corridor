@@ -5,11 +5,11 @@ import ProfileCard from './ProfileCard'
 
 const OurTeam = () => {
   return (
-    <section>
+    <section className='skin-bg'>
     <Container>
     <SectionTitle
     title="Meet our amazing "
-    colorText='Team'
+    colorText='team'
     />
     <br />
     <br />

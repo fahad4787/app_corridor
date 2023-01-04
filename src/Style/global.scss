@@ -10,13 +10,16 @@ body {
   font-family: $popin;
 }
 
-#wrapper{
+#wrapper {
   display: block;
   width: 100%;
   position: relative;
   overflow: hidden;
 }
 
+.container {
+  max-width: 1190px;
+}
 
 .navbar-toggler {
   &:focus {
@@ -36,8 +39,15 @@ body {
   @include media("<tablet-x") {
     background-color: #fff;
   }
+
+  .logo {
+    display: none;
+  }
   .navBar {
     .dropdown {
+      @include media("<tablet-x") {
+        width: 100%;
+      }
       .dropdown-item {
         color: $green !important;
         &:hover {
@@ -46,9 +56,8 @@ body {
       }
     }
     a {
-      padding: 10px 16px !important;
-      font-size: 14px;
-      font-weight: 600;
+      padding: 12px 20px !important;
+      font-size: 12px;
       color: #fff !important;
       text-transform: uppercase;
       position: relative;
@@ -85,6 +94,7 @@ body {
       margin-left: 20px;
       @include media("<tablet-x") {
         color: $green !important;
+        margin: 20px auto;
       }
       &:hover {
         background-color: #2a8a6a;
@@ -101,12 +111,20 @@ body {
   z-index: 9999;
   width: 100%;
   transition: all ease-in-out 0.3s;
+  .logo1 {
+    display: none;
+  }
   .navBar {
+    .dropdown {
+      @include media("<tablet-x") {
+        width: 100%;
+      }
+    }
     a {
-      padding: 10px 16px !important;
-      font-size: 14px;
-      font-weight: 600;
-      color: $green !important;
+      padding: 12px 20px !important;
+      font-size: 12px;
+      font-weight: 400;
+      color: #000 !important;
       text-transform: uppercase;
       position: relative;
       &:before {
@@ -137,9 +155,56 @@ body {
       border-radius: 30px;
       padding: 0 30px;
       margin-left: 20px;
+      @include media("<tablet-x") {
+        margin: 20px auto;
+      }
       &:hover {
         background-color: #2a8a6a;
         color: #fff;
+      }
+    }
+  }
+}
+
+.navbar-collapse {
+  .tablet-icon {
+    display: none;
+  }
+  @include media("<tablet-x") {
+    position: fixed;
+    width: 230px;
+    top: 0px;
+    background: rgb(255, 255, 255);
+    left: 0px;
+    bottom: 0px;
+    left: -250px;
+    transition: all ease-in-out 0.6s;
+    overflow-y: auto;
+
+    &.show {
+      left: 0;
+      padding: 20px 0;
+      transition: all ease-in-out 0.6s;
+      border-right: 1px solid #cacaca;
+      .tablet-icon {
+        display: block;
+        &:hover {
+          &:before {
+            width: 0 !important;
+          }
+        }
+      }
+    }
+
+    .navbar-nav {
+      align-items: flex-start !important;
+      a {
+        width: 100%;
+        border-bottom: 1px solid #cacaca;
+      }
+
+      button {
+        margin: 15px 0;
       }
     }
   }
@@ -157,25 +222,50 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  @include media("<tablet-x"){
+  padding: 0 30px;
+  counter-reset: my-sec-counter;
+  @include media("<tablet-x") {
     padding: 0 15px 0 15px;
   }
-  .banner-sec {
-    padding: 0 90px;
-    @include media("<tablet"){
-      padding: 0 10px;
+  .banner-holder{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    padding: 100px 15px;
+
+    .banner-sec {
+      position: relative;
+      overflow: hidden;
+    }
+  
+  }
+  
+  .img-box {
+    width: 600px;
+    margin: auto;
+    transform: translateY(100vh);
+    @include media("<tablet") {
+      width: 100%;
+      padding: 0 20px;
     }
   }
 
   .banner-text {
-    font-size: 40px;
-    line-height: 50px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 26px;
     color: #fff;
-    @include  media("<tablet-x"){
+    font-weight: 700;
+    width: 600px;
+    max-width: 100%;
+    letter-spacing: -0.01em;
+    line-height: 39px;
+    @include media("<tablet-x") {
       font-size: 32px;
       line-height: 40px;
     }
-    @include media("<tablet"){
+    @include media("<tablet") {
       font-size: 18px;
       line-height: 25px;
     }
@@ -189,7 +279,7 @@ section {
   position: relative;
   padding: 90px 0;
   overflow: hidden;
-  @include media("<phone"){
+  @include media("<phone") {
     padding: 50px 0;
   }
   &.gray-bg {
@@ -215,9 +305,21 @@ section {
 }
 
 .accordion-button {
+  background-color: $green !important;
+  color: #fff !important;
+  &:after {
+    background-color: #fff !important;
+    border-radius: 50%;
+  }
+  i {
+    color: #fff !important;
+  }
   &.collapsed {
     background-color: #fff !important;
     color: #000 !important;
+    i {
+      color: $green !important;
+    }
   }
   &:focus {
     border-color: transparent !important;
@@ -229,19 +331,99 @@ section {
     margin-right: 15px;
   }
 }
+.banner-slider {
+  .slick-dots {
+    position: absolute;
+    text-align: start;
+    flex-direction: column !important;
+    display: flex !important;
+    width: unset;
+    bottom: unset;
+    height: unset;
+    top: 50%;
+    transform: translateY(-50%);
+
+    li {
+      height: 60px;
+      margin: 15px 0;
+      position: relative;
+      font-weight: 700;
+      &.slick-active {
+        &:after {
+          height: 92%;
+          transition: all ease-in-out 0.3s;
+        }
+      }
+      &:after {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: -3px;
+        top: 0;
+        bottom: 0;
+        border-right: 3px solid #fff;
+        height: 0;
+        transition: all ease-in-out 0.3s;
+      }
+      button {
+        font-size: 13px;
+        padding: 0 0;
+        transform: rotate(-90deg);
+        color: $green;
+        font-weight: 700;
+        letter-spacing: 0;
+        font-size: 0;
+        &:before {
+          content: "SLIDE" !important;
+          font-size: 13px;
+          left: -35px;
+          top: 0px;
+          color: #fff;
+          letter-spacing: 0;
+          font-weight: 700;
+          font-family: inherit;
+        }
+        &::after {
+          counter-increment: my-sec-counter;
+          content: "0" counter(my-sec-counter);
+          position: absolute;
+          font-size: 13px;
+          right: 0px;
+          top: 10px;
+          color: $green;
+          letter-spacing: 0;
+          font-weight: 700;
+          font-family: inherit;
+        }
+      }
+    }
+  }
+  .slick-current {
+    .img-box {
+      transform: translateY(0);
+      transition: all linear 2s 0.3s;
+    }
+  }
+}
 
 .advertisement_tabs {
   justify-content: center;
   border-bottom: none !important;
 
-  @include media("<phone"){
+  @include media("<phone") {
     flex-wrap: nowrap;
     overflow-x: auto;
-    justify-content: flex-start;
 
-    .nav-item{
-      flex: 0 0 auto;
+    .nav-item {
+      flex: 1 0 auto;
+      button {
+        width: 100%;
+      }
     }
+  }
+
+  @include media("<xs-phone") {
+    justify-content: flex-start;
   }
 
   .nav-item {
@@ -253,7 +435,7 @@ section {
       padding: 20px 40px;
       font-size: 20px;
       position: relative;
-      @include media("<tablet-x"){
+      @include media("<tablet-x") {
         font-size: 14px;
         padding: 10px 20px;
       }
@@ -282,55 +464,35 @@ section {
   .tab-pane {
     &.show {
       transition: all ease-in-out 1s 0.3s;
-    }
-  }
-}
+      [class*="main_heading"] {
+        transition: all ease-in-out 1s 0.3s;
+        opacity: 1;
+        background: -webkit-linear-gradient(#54b05d, #2a8a6a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transform: translateY(0px);
+      }
+      [class*="Advertisment_card"] {
+        transition: all ease-in-out 1s 2s;
+        opacity: 1;
+        transform: translateX(0);
+      }
+      [class*="Advertisment_box"] {
+        transform: translateX(0px);
+        opacity: 1;
+      }
 
-.banner-slider {
-  .slick-dots {
-    position: absolute;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    text-align: start;
-    top: 50%;
-    flex-direction: column !important;
-    display: flex !important;
-    gap: 100px;
-    z-index: 0;
-    li {
-      height: 60px;
-      margin: 0 25px;
-      position: relative;
-      &.slick-active {
-        &:after {
-          height: 100%;
-          transition: all ease-in-out 0.3s;
-        }
+      [class*="Advertisment_box1"] {
+        transition: all ease 0.6s 2s;
       }
-      &:after {
-        position: absolute;
-        content: "";
-        left: 0;
-        right: -3px;
-        top: 0;
-        bottom: 0;
-        border-right: 3px solid #fff;
-        height: 0;
-        transition: all ease-in-out 0.3s;
+
+      [class*="Advertisment_box2"] {
+        transform: translateX(0);
+        transition: all ease 0.6s 2.5s;
       }
-      button {
-        font-size: 18px;
-        padding: 0 10px;
-        transform: rotate(-90deg);
-        color: #fff;
-        &:before {
-          content: "Slide" !important;
-          font-size: 18px;
-          left: -35px;
-          top: 0px;
-          color: #fff;
-        }
+
+      [class*="Advertisment_box3"] {
+        transition: all ease 0.6s 3s;
       }
     }
   }
@@ -345,7 +507,20 @@ section {
     background-color: transparent;
     border: none;
     &:hover {
-      opacity: 0.8;
+      .img-box {
+        position: relative;
+        &:after {
+          position: absolute;
+          content: "";
+          left: 20px;
+          right: 20px;
+          top: 0;
+          bottom: 0;
+          border-radius: 30px 30px 0 0;
+          background-color: $green;
+          opacity: 0.6;
+        }
+      }
     }
     .img-box {
       padding: 0 20px;
@@ -353,7 +528,7 @@ section {
         height: 400px;
         object-fit: fill;
         border-radius: 30px 30px 0 0;
-        @include media("<xs-phone"){
+        @include media("<xs-phone") {
           height: unset;
         }
       }
@@ -367,6 +542,333 @@ section {
           color: $green;
         }
       }
+    }
+  }
+}
+
+.circle_img {
+  width: 350px;
+  height: 350px;
+  background-image: url(../Images/circleslider.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 100px auto 20px auto;
+  position: relative;
+  @include media("<tablet-x") {
+    margin: 100px auto 110px auto;
+  }
+  @include media("<xs-phone") {
+    display: none;
+  }
+
+  .slick-track {
+    div {
+      &:nth-child(1) {
+        position: absolute;
+        top: -5px;
+        left: 40px;
+      }
+      &:nth-child(2) {
+        position: absolute;
+        top: 215px;
+        left: -180px;
+      }
+
+      &:nth-child(3) {
+        position: absolute;
+        top: -38px;
+        left: 220px;
+        transform: rotate(50deg);
+      }
+
+      &:nth-child(4) {
+        position: absolute;
+        top: 225px;
+        left: 280px;
+      }
+
+      &:nth-child(5) {
+        position: absolute;
+        top: 445px;
+        left: 40px;
+      }
+
+      &:nth-child(6) {
+        position: absolute;
+        top: 220px;
+        left: 360px;
+        transform: rotate(135deg);
+      }
+
+      &:nth-child(7) {
+        position: absolute;
+        top: 128px;
+        left: -58px;
+        transform: rotate(-48deg);
+      }
+
+      &:nth-child(8) {
+        position: absolute;
+        top: 275px;
+        left: -113px;
+        transform: rotate(50deg);
+      }
+    }
+
+    .slick-current {
+      .slide_icon {
+        font-size: 50px;
+        transition: all linear 0.6s;
+        background: #fff;
+        color: $green;
+      }
+    }
+  }
+
+  .slick-list {
+    overflow: visible !important;
+  }
+
+  .slide_icon {
+    width: 100px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #2a8a61;
+    position: absolute;
+    top: -80px;
+    border-radius: 15px 30px 15px 30px;
+    font-size: 24px;
+  }
+}
+
+.nav-slider {
+  h3 {
+    font-size: 20px;
+    margin: auto;
+    font-weight: 400;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #282828;
+  }
+}
+.counter-list {
+  counter-reset: my-sec-counter2;
+  .box {
+    @include media("<widescreen") {
+      margin-bottom: 30px;
+    }
+    &:hover {
+      .content {
+        box-shadow: none;
+        transition: all ease 0.6s;
+        h3 {
+          color: $green;
+        }
+      }
+    }
+    &.bg {
+      //background: url(../Images/circle-shapeGreen.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 95%;
+      height: 341px;
+      width: 415px;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 0 70px 0 0;
+      margin: 20px auto;
+      @include media("<xs-phone") {
+        width: 100% !important;
+        padding: 0 !important;
+
+        &:after {
+          display: none !important;
+        }
+
+        &:before {
+          display: none !important;
+        }
+      }
+
+      &:after {
+        position: absolute;
+        width: 341px;
+        height: 341px;
+        content: "";
+        border: 5px solid $green;
+        border-radius: 50%;
+        display: block;
+        top: 0;
+        left: 0;
+        border-right-color: #fff;
+        transform: rotate(-45deg);
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 700;
+        content: "\f178";
+        font-size: 40px;
+        right: 38px;
+        z-index: 999;
+        color: $green;
+      }
+
+      @include media("<xs-phone") {
+        // background-image: none;
+        // padding: 0;
+        // width: unset;
+      }
+    }
+
+    .content {
+      width: 280px;
+      height: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+      box-shadow: 0px 0px 7px -3px rgb(65 138 106);
+      border-radius: 50%;
+      line-height: 24px;
+      color: #000;
+      font-size: 16px;
+      transition: all ease 0.6s;
+      @include media("<xs-phone") {
+        &:after {
+          top: 0 !important;
+          right: 50% !important;
+        }
+      }
+
+      &::after {
+        counter-increment: my-sec-counter2;
+        content: "0 " counter(my-sec-counter2);
+        position: absolute;
+        width: 55px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        background-color: $green;
+        color: #fff;
+        top: -30px;
+        right: 210px;
+        z-index: 99;
+      }
+
+      ul {
+        text-align: start;
+        margin: 0;
+        padding: 0 15px;
+        list-style-type: none;
+        font-size: 11px;
+        line-height: 16px;
+        li {
+          position: relative;
+          padding-left: 10px;
+
+          &:after {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 5px;
+            width: 5px;
+            height: 5px;
+            background-color: $green;
+            border-radius: 50%;
+          }
+        }
+      }
+      p {
+        margin-bottom: 0px;
+      }
+
+      h3 {
+        font-weight: 500;
+        color: #000;
+      }
+    }
+  }
+}
+
+.review_tabs {
+  border: none;
+  @include media("<tablet-x") {
+    flex-direction: column;
+    li {
+      margin: auto;
+      max-width: 350px;
+
+      [class*="Reviews_text_box"] {
+        width: 200px;
+      }
+    }
+  }
+
+  .nav-link {
+    border: none;
+    &:hover {
+      border: none;
+    }
+    .img-box {
+      opacity: 0.6;
+      width: 75px;
+      box-shadow: 0 9px 20px 0 rgb(149 149 149 / 75%);
+      border-radius: 50%;
+      transition: all ease-in-out 0.6s;
+      img {
+        border-radius: 50%;
+      }
+    }
+    &.active {
+      border: none;
+
+      .img-box {
+        opacity: 1;
+        transition: all ease-in-out 0.6s;
+      }
+    }
+  }
+}
+
+.SponserSlider {
+  .img-box {
+    padding: 20px;
+    height: 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex !important;
+    filter: grayscale(100%);
+    transition: all ease 0.3s;
+    width: 100px;
+    align-items: center;
+    &:hover {
+      filter: grayscale(0);
+    }
+    img {
+      height: 65px !important;
     }
   }
 }

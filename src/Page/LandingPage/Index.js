@@ -9,6 +9,7 @@ import MapSection from '../../component/Map'
 import OurProjects from '../../component/Our Projects'
 import OurTeam from '../../component/OurTeam'
 import Reviews from '../../component/Reviews'
+import Sponser from '../../component/Sponser'
 import StatsSection from '../../component/Stats'
 import GetTouchUs from '../../component/TouchWithUs'
 
@@ -25,6 +26,7 @@ const LandingPage = () => {
     <OurTeam/>
     <OurProjects/>
     <Reviews/>
+    <Sponser/>
     <GetTouchUs/>
     <MapSection/>
     </main>

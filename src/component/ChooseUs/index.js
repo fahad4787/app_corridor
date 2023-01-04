@@ -14,8 +14,8 @@ const ChooseUs = () => {
     <Container>
     <Row className='align-items-center mb-5'>
     <Col lg={6} md={12} >
-    <SectionTitle  title="WHY CHOOSE"
-    colorText=" APP CORRIDOR"/>
+    <SectionTitle  title="Why choose"
+    colorText=" app corridor"/>
     <ChooseList/>
     </Col>
     <Col lg={6} md={12}>
@@ -28,7 +28,7 @@ const ChooseUs = () => {
     <SideImage img={mission}/>
     </Col>
     <Col lg={6} md={12}>
-    <SectionTitle  title="OUR"
+    <SectionTitle  title="Our"
     colorText="Services"/>
    <AccrodionSection/>
     </Col>

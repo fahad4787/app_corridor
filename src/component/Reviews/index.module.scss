@@ -1,69 +1,93 @@
-.slide {
+.profile_img {
+  margin: auto;
+  text-align: center;
   display: flex;
-  flex-direction: column;
-
-  .profile_img {
-    width: 200px;
-    margin: auto;
-    text-align: center;
-    img {
-      border-radius: 50%;
-      display: block;
-      height: auto;
-      width: 100%;
-    }
-    h6 {
-      font-size: 22px;
-      color: #2a8a6a;
-      margin: 10px 0;
-    }
-
-    p {
-      font-size: 18px;
-      font-style: italic;
-      span {
-        font-weight: 600;
-      }
-    }
+  align-items: center;
+  gap: 8px;
+  img {
+    border-radius: 50%;
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+  h6 {
+    color: #2a8a6a;
+    margin: 0px 0px;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: .01em;
   }
 
-  .review {
-    h1 {
-      font-weight: 500;
-      font-size: 35px;
+  p {
+    font-size: 18px;
+    font-style: italic;
+    color: #000;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: .01em;
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+
+.text_box{
+  text-align: start;
+}
+
+
+
+.content_wrapper{
+  position: relative;
+  i{
+    top: -10px;
+    position: absolute;
+    font-size: 280px;
+    left: 50%;
+    color: #f7f7f7;
+    margin-left: -195px;
+    text-shadow: 0 9px 94px rgb(106 180 0 / 45%);
+    &:before{
+      position: absolute;
+      font-style: normal;
+      speak: none;
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: 0.2em;
       text-align: center;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1em;
+      margin-left: 0.2em;
+      -webkit-font-smoothing: antialiased;
+      z-index: -1;
     }
+  }
+  .contect_text{
+    font-style: normal;
+    font-size: 32px;
+    line-height: 44px;
+    font-weight: 700;
+    text-align: center;
+    color: #000;
+    display: block;
+    margin: 30px 0;
+    padding: 40px 0;
   }
 }
 
-
-@media screen and (max-width: 992px) {
-   .review{
-    h1{
-       font-size: 30px !important;
-       line-height: 40px;
+@media screen and (max-width: 991px) {
+  .content_wrapper{
+    .contect_text{
+      font-size: 20px;
+      line-height: 30px;
     }
-   }
+    i{
+      font-size: 150px;
+      margin-left: -105px;
+      top: 10px;
+    }
+  }
 }
-
-
-@media screen and (max-width: 667px) {
-    .review{
-     h1{
-        font-size: 24px !important;
-        line-height: 30px;
-     }
-    }
- }
-
- @media screen and (max-width: 580px) {
-    .profile_img{
-        
-    }
-    .review{
-     h1{
-        font-size: 14px !important;
-        line-height: 25px;
-     }
-    }
- }

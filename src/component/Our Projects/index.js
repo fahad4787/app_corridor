@@ -35,7 +35,7 @@ const OurProjects = () => {
   };
   return (
     <section className="gray-bg">
-      <SectionTitle title="Our" colorText="Projects" />
+      <SectionTitle title="Our" colorText="projects" />
       <Container>
         <Slider className="ProjectSlider" {...settings}>
           <div>

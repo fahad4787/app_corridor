@@ -8,8 +8,8 @@ const StatsSection = () => {
     <section className='gray-bg'>
     <Container>
     <SectionTitle
-    title='Some Cool Stats About'
-    colorText='Our Company'
+    title='Some cool stats about'
+    colorText='our company'
     des=""
     />
 

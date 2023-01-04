@@ -8,8 +8,8 @@ const AboutSection = () => {
     <section className="gray-bg">
       <Container>
         <SectionTitle
-          title="Meet APPS "
-          colorText="CORRIDOR"
+          title="Meet apps "
+          colorText="corridor"
           des="We are dedicated team of apps corridor to deliver technology-oriented solution to increase your bussiness"
         />
 

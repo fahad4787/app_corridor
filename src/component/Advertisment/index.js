@@ -4,10 +4,13 @@ import SectionTitle from "../SectionTitle";
 import stack from "../../Images/stackimg.png";
 import dif from "../../Images/diffimg.png";
 import agile from "../../Images/agile.png";
+import EffectivenessTab from "./Effectiveness";
+import TechnicalSlider from "./TechnicalSlider";
+import AgileService from "./AgileService";
 
 const AdvertismentSection = () => {
   return (
-    <section className="skin-bg">
+    <section>
       <Container>
         <SectionTitle title="Our company has" colorText="everything" />
         <Tabs
@@ -16,19 +19,13 @@ const AdvertismentSection = () => {
           className='my-5 advertisement_tabs'
         >
           <Tab eventKey="0" title="Technical Experties">
-            <div className="img-box shadow">
-              <img src={stack} alt="" />
-            </div>
+            <TechnicalSlider/>
           </Tab>
           <Tab eventKey="1" title="Effectiveness">
-            <div className="img-box shadow">
-              <img src={dif} alt="" />
-            </div>
+           <EffectivenessTab/>
           </Tab>
           <Tab eventKey="2" title="Agile Apporch">
-            <div className="img-box shadow">
-              <img src={agile} alt="" />
-            </div>
+           <AgileService/>
           </Tab>
         </Tabs>
       </Container>

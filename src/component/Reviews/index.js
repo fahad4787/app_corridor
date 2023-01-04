@@ -1,79 +1,89 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, Tab, Tabs } from "react-bootstrap";
 import SectionTitle from "../SectionTitle";
 import user1 from "../../Images/user1.jpg";
 import user2 from "../../Images/user2.jpg";
 import user3 from "../../Images/user3.jpg";
 import classes from "./index.module.scss";
-import Slider from "react-slick";
 
 const Reviews = () => {
-  const settings = {
-    dots: false,
-    arrow: true,
-    infinite: true,
-    speed: 1000,
-    autoplay: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
   return (
     <section className="pb-0">
       <Container>
-        <SectionTitle title="What our awesome" colorText="users say" />
-        <Slider className="ProjectSlider" {...settings}>
-          <div className={classes.slide}>
-            <div className={classes.profile_img}>
-              <img src={user1} alt="img" />
-              <h6 className={classes.name}>Vlad Sargu</h6>
-              <p>
-                CEO at <span>VSArt</span>
-              </p>
-            </div>
-
-            <span className={classes.review}>
-              <h1>
-                A est vitae ut nemo et placeat ab veniam possimus iusto,
-                doloribus, debitis fugit perspiciatis neque suscipit, dolorum
-                earum soluta cumque iste.
-              </h1>
-            </span>
+        <SectionTitle
+          title="What our awesome"
+          colorText="users say"
+          des="Our clients’ trust has been our number one priority and we never compromise on this."
+        />
+        <Tabs
+          defaultActiveKey="0"
+          id="uncontrolled-tab-example"
+          className="my-5 review_tabs justify-content-around"
+        >
+          <Tab
+            eventKey="0"
+            title={
+              <div className={classes.profile_img}>
+                <div className="img-box">
+                  <img src={user1} alt="image" />
+                </div>
+                <div className={classes.text_box}>
+                  <h6>Vlad Sargu</h6>
+                  <p>
+                    CEO at <span>VSArt</span>
+                  </p>
+                </div>
+              </div>
+            }
+          >
+         <div className={classes.content_wrapper}>
+         <i class="fa-solid fa-quote-right"></i>
+         <span className={classes.contect_text}>A est vitae ut nemo et placeat ab veniam possimus iusto, doloribus, debitis fugit perspiciatis neque suscipit, dolorum earum soluta cumque iste.</span>
+         </div>
+          </Tab>
+          <Tab
+            eventKey="1"
+            title={
+              <div className={classes.profile_img}>
+                <div className="img-box">
+                  <img src={user2} alt="image" />
+                </div>
+                <div className={classes.text_box}>
+                  <h6>Christine May</h6>
+                  <p>
+                    marketer at <span>SpicyTeam</span>
+                  </p>
+                </div>
+              </div>
+            }
+          >
+          <div className={classes.content_wrapper}>
+          <i class="fa-solid fa-quote-right"></i>
+          <span className={classes.contect_text}>Incidunt harum quos id, reiciendis nesciunt voluptatibus officia, sequi deleniti hic magni labore libero et eveniet reprehenderit, natus aspernatur! Veritatis, rem, quisquam!</span>
           </div>
-          <div className={classes.slide}>
-          <div className={classes.profile_img}>
-            <img src={user2} alt="img" />
-            <h6 className={classes.name}>Vlad Sargu</h6>
-            <p>
-              CEO at <span>VSArt</span>
-            </p>
+          </Tab>
+          <Tab
+            eventKey="2"
+            title={
+              <div className={classes.profile_img}>
+                <div className="img-box">
+                  <img src={user3} alt="image" />
+                </div>
+                <div className={classes.text_box}>
+                  <h6>Andy Way</h6>
+                  <p>
+                    designer at <span>DDB</span>
+                  </p>
+                </div>
+              </div>
+            }
+          >
+          <div className={classes.content_wrapper}>
+          <i class="fa-solid fa-quote-right"></i>
+          <span className={classes.contect_text}>A est vitae ut nemo et placeat ab veniam possimus iusto, doloribus, debitis fugit perspiciatis neque suscipit, dolorum earum soluta cumque iste.</span>
           </div>
-
-          <span className={classes.review}>
-            <h1>
-              A est vitae ut nemo et placeat ab veniam possimus iusto,
-              doloribus, debitis fugit perspiciatis neque suscipit, dolorum
-              earum soluta cumque iste.
-            </h1>
-          </span>
-        </div>
-        <div className={classes.slide}>
-        <div className={classes.profile_img}>
-          <img src={user3} alt="img" />
-          <h6 className={classes.name}>Vlad Sargu</h6>
-          <p>
-            CEO at <span>VSArt</span>
-          </p>
-        </div>
-
-        <span className={classes.review}>
-          <h1>
-            A est vitae ut nemo et placeat ab veniam possimus iusto,
-            doloribus, debitis fugit perspiciatis neque suscipit, dolorum
-            earum soluta cumque iste.
-          </h1>
-        </span>
-      </div>
-        </Slider>
+          </Tab>
+        </Tabs>
       </Container>
     </section>
   );

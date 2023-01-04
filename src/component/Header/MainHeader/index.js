@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import logo from "../../../Images/logo.svg";
+import logo2 from "../../../Images/logo-white.svg";
 const MainHeader = () => {
 
   const [navBar,setNavbar] = useState(false)
@@ -20,10 +21,12 @@ const MainHeader = () => {
     <>
     <Navbar expand="lg" className={navBar? 'nav_active': 'mainHeader'}>
     <Container>
-      <Navbar.Brand href="#home"><img src={logo} alt="logo" /></Navbar.Brand>
+      <Navbar.Brand className="logo" href="#home"><img src={logo} alt="logo" /></Navbar.Brand>
+      <Navbar.Brand className="logo1" href="#home"><img src={logo2} alt="logo" /></Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className="navBar">
-        <Nav className="justify-content-end w-100">
+      <Navbar.Brand href="#home" className="tablet-icon"><img src={logo} alt="logo" /></Navbar.Brand>
+        <Nav className="justify-content-end align-items-center w-100">
           <Nav.Link href="#home">Home</Nav.Link>
           <Nav.Link href="#link">About</Nav.Link>
           <NavDropdown title="Service" id="basic-nav-dropdown">

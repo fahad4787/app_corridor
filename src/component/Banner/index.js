@@ -1,20 +1,22 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import Slider from "react-slick";
-import SectionTitle from "../SectionTitle";
-import Slide from "./Slide";
+import { useState } from "react";
+import BannerData from "./BannerData";
+import SliderCard from "./SliderCard";
+
+
 
 const Banner = () => {
+  const [data] = useState(BannerData);
   const settings = {
     dots: true,
-    arrow: false,
-    infinite: true,
-    speed: 3000,
+    arrows: false,
+    speed: 1500,
     autoplay: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    vertical: true,
-    verticalSwiping: true,
+    fade:true,
     responsive: [
       {
         breakpoint: 768,
@@ -29,8 +31,15 @@ const Banner = () => {
     <div className="banner">
       <Container>
         <Slider className="banner-slider" {...settings}>
-         <Slide/>
-         <Slide/>
+         
+          {
+            data.map((currn, ind)=>{
+              return(
+                <SliderCard key={ind} {...currn}/>
+              );
+            })
+          
+         }
         </Slider>
       </Container>
     </div>

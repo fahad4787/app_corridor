@@ -9,11 +9,12 @@
     li {
       display: block;
       a {
-        font-size: 18px;
+        font-size: 14px;
+        letter-spacing: .01em;
         text-decoration: none;
         color: #000;
         line-height: 25px;
-        margin: 15px 0;
+        margin-bottom: 15px;
         display: block;
         position: relative;
         transition: all ease-in-out 0.3s;
