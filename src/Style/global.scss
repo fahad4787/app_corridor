@@ -17,264 +17,6 @@ body {
   overflow: hidden;
 }
 
-.container {
-  max-width: 1190px;
-}
-
-.navbar-toggler {
-  &:focus {
-    box-shadow: none !important;
-  }
-}
-
-.mainHeader {
-  background: transparent;
-  position: absolute !important;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  color: #fff;
-  transition: all ease-in-out 0.3s;
-  @include media("<tablet-x") {
-    background-color: #fff;
-  }
-
-  .logo {
-    display: none;
-  }
-  .navBar {
-    .dropdown {
-      @include media("<tablet-x") {
-        width: 100%;
-      }
-      .dropdown-item {
-        color: $green !important;
-        &:hover {
-          color: #fff !important;
-        }
-      }
-    }
-    a {
-      padding: 12px 20px !important;
-      font-size: 12px;
-      color: #fff !important;
-      text-transform: uppercase;
-      position: relative;
-      @include media("<tablet-x") {
-        color: $green !important;
-      }
-      &:before {
-        position: absolute;
-        content: "";
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        width: 0;
-        background-color: #2a8a6a;
-        transition: all ease-in-out 0.3s;
-        z-index: -1;
-      }
-      &:hover {
-        color: #fff !important;
-        z-index: 1;
-        &:before {
-          width: 100%;
-          transition: all ease-in-out 0.3s;
-        }
-      }
-    }
-
-    .btn {
-      border: 1px solid #2a8a6a;
-      color: #fff;
-      border-radius: 30px;
-      padding: 0 30px;
-      margin-left: 20px;
-      @include media("<tablet-x") {
-        color: $green !important;
-        margin: 20px auto;
-      }
-      &:hover {
-        background-color: #2a8a6a;
-        color: #fff;
-      }
-    }
-  }
-}
-
-.nav_active {
-  position: fixed !important;
-  top: 0;
-  background-color: #fff;
-  z-index: 9999;
-  width: 100%;
-  transition: all ease-in-out 0.3s;
-  .logo1 {
-    display: none;
-  }
-  .navBar {
-    .dropdown {
-      @include media("<tablet-x") {
-        width: 100%;
-      }
-    }
-    a {
-      padding: 12px 20px !important;
-      font-size: 12px;
-      font-weight: 400;
-      color: #000 !important;
-      text-transform: uppercase;
-      position: relative;
-      &:before {
-        position: absolute;
-        content: "";
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        width: 0;
-        background-color: #2a8a6a;
-        transition: all ease-in-out 0.3s;
-        z-index: -1;
-      }
-      &:hover {
-        color: #fff !important;
-        z-index: 1;
-        &:before {
-          width: 100%;
-          transition: all ease-in-out 0.3s;
-        }
-      }
-    }
-
-    .btn {
-      border: 1px solid #2a8a6a;
-      color: $green;
-      border-radius: 30px;
-      padding: 0 30px;
-      margin-left: 20px;
-      @include media("<tablet-x") {
-        margin: 20px auto;
-      }
-      &:hover {
-        background-color: #2a8a6a;
-        color: #fff;
-      }
-    }
-  }
-}
-
-.navbar-collapse {
-  .tablet-icon {
-    display: none;
-  }
-  @include media("<tablet-x") {
-    position: fixed;
-    width: 230px;
-    top: 0px;
-    background: rgb(255, 255, 255);
-    left: 0px;
-    bottom: 0px;
-    left: -250px;
-    transition: all ease-in-out 0.6s;
-    overflow-y: auto;
-
-    &.show {
-      left: 0;
-      padding: 20px 0;
-      transition: all ease-in-out 0.6s;
-      border-right: 1px solid #cacaca;
-      .tablet-icon {
-        display: block;
-        &:hover {
-          &:before {
-            width: 0 !important;
-          }
-        }
-      }
-    }
-
-    .navbar-nav {
-      align-items: flex-start !important;
-      a {
-        width: 100%;
-        border-bottom: 1px solid #cacaca;
-      }
-
-      button {
-        margin: 15px 0;
-      }
-    }
-  }
-}
-
-.banner {
-  position: relative;
-  background-image: url(../Images/banner-bg.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #0a271e;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 30px;
-  counter-reset: my-sec-counter;
-  @include media("<tablet-x") {
-    padding: 0 15px 0 15px;
-  }
-  .banner-holder{
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-    align-items: center;
-    padding: 100px 15px;
-
-    .banner-sec {
-      position: relative;
-      overflow: hidden;
-    }
-  
-  }
-  
-  .img-box {
-    width: 600px;
-    margin: auto;
-    transform: translateY(100vh);
-    @include media("<tablet") {
-      width: 100%;
-      padding: 0 20px;
-    }
-  }
-
-  .banner-text {
-    text-align: center;
-    margin: 0 auto;
-    font-size: 26px;
-    color: #fff;
-    font-weight: 700;
-    width: 600px;
-    max-width: 100%;
-    letter-spacing: -0.01em;
-    line-height: 39px;
-    @include media("<tablet-x") {
-      font-size: 32px;
-      line-height: 40px;
-    }
-    @include media("<tablet") {
-      font-size: 18px;
-      line-height: 25px;
-    }
-    span {
-      color: $green;
-    }
-  }
-}
-
 section {
   position: relative;
   padding: 90px 0;
@@ -293,7 +35,11 @@ section {
     background-repeat: no-repeat;
   }
 }
-
+.container {
+  @include media("<tablet-x") {
+    max-width: 100%;
+  }
+}
 .img-box {
   width: 100%;
 
@@ -304,34 +50,7 @@ section {
   }
 }
 
-.accordion-button {
-  background-color: $green !important;
-  color: #fff !important;
-  &:after {
-    background-color: #fff !important;
-    border-radius: 50%;
-  }
-  i {
-    color: #fff !important;
-  }
-  &.collapsed {
-    background-color: #fff !important;
-    color: #000 !important;
-    i {
-      color: $green !important;
-    }
-  }
-  &:focus {
-    border-color: transparent !important;
-    box-shadow: none !important;
-  }
-  i {
-    color: $green;
-    font-size: 18px;
-    margin-right: 15px;
-  }
-}
-.banner-slider {
+.banner_slider {
   .slick-dots {
     position: absolute;
     text-align: start;
@@ -406,72 +125,10 @@ section {
   }
 }
 
-.advertisement_tabs {
-  justify-content: center;
-  border-bottom: none !important;
-
-  @include media("<phone") {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-
-    .nav-item {
-      flex: 1 0 auto;
-      button {
-        width: 100%;
-      }
-    }
-  }
-
-  @include media("<xs-phone") {
-    justify-content: flex-start;
-  }
-
-  .nav-item {
-    button {
-      border: none;
-      background-color: #000;
-      color: #fff;
-      border-radius: 0;
-      padding: 20px 40px;
-      font-size: 20px;
-      position: relative;
-      @include media("<tablet-x") {
-        font-size: 14px;
-        padding: 10px 20px;
-      }
-      &:after {
-        position: absolute;
-        content: "";
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 0;
-        border-bottom: 5px solid $green;
-        transition: all ease-in-out 0.3s;
-      }
-      &.active {
-        background-color: #000;
-        color: #fff;
-        &:after {
-          width: 100%;
-          transition: all ease-in-out 0.3s;
-        }
-      }
-    }
-  }
-}
 .tab-content {
   .tab-pane {
     &.show {
       transition: all ease-in-out 1s 0.3s;
-      [class*="main_heading"] {
-        transition: all ease-in-out 1s 0.3s;
-        opacity: 1;
-        background: -webkit-linear-gradient(#54b05d, #2a8a6a);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        transform: translateY(0px);
-      }
       [class*="Advertisment_card"] {
         transition: all ease-in-out 1s 2s;
         opacity: 1;
@@ -499,7 +156,6 @@ section {
 }
 
 .ProjectSlider {
-  padding: 50px 0;
   .card {
     text-decoration: none;
     color: #000;
@@ -509,6 +165,10 @@ section {
     &:hover {
       .img-box {
         position: relative;
+        img {
+          transform: scale(1);
+          transition: all ease 0.3s;
+        }
         &:after {
           position: absolute;
           content: "";
@@ -524,10 +184,12 @@ section {
     }
     .img-box {
       padding: 0 20px;
+      height: 260px;
+      overflow: hidden;
       img {
-        height: 400px;
-        object-fit: fill;
         border-radius: 30px 30px 0 0;
+        transform: scale(0.95);
+        transition: all ease 0.3s;
         @include media("<xs-phone") {
           height: unset;
         }
@@ -535,7 +197,7 @@ section {
     }
 
     .details {
-      padding: 20px;
+      padding: 20px 20px 0 28px;
       h4 {
         a {
           text-decoration: none;
@@ -547,8 +209,8 @@ section {
 }
 
 .circle_img {
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
   background-image: url(../Images/circleslider.png);
   background-size: cover;
   background-position: center center;
@@ -566,62 +228,65 @@ section {
     div {
       &:nth-child(1) {
         position: absolute;
-        top: -5px;
-        left: 40px;
+        top: 0px;
+        left: 30px;
       }
       &:nth-child(2) {
         position: absolute;
-        top: 215px;
-        left: -180px;
+        left: 190px;
+        top: -10px;
+        transform: rotate(50deg);
       }
 
       &:nth-child(3) {
         position: absolute;
-        top: -38px;
-        left: 220px;
-        transform: rotate(50deg);
+        top: 75px;
+        left: 280px;
+        transform: rotate(90deg);
       }
 
       &:nth-child(4) {
         position: absolute;
-        top: 225px;
-        left: 280px;
+        top: 390px;
+        left: 240px;
+        transform: rotate(-45deg);
       }
 
       &:nth-child(5) {
         position: absolute;
-        top: 445px;
+        top: 390px;
         left: 40px;
       }
 
       &:nth-child(6) {
         position: absolute;
-        top: 220px;
-        left: 360px;
-        transform: rotate(135deg);
+        top: 250px;
+        left: -115px;
+        transform: rotate(45deg);
       }
 
       &:nth-child(7) {
         position: absolute;
-        top: 128px;
-        left: -58px;
-        transform: rotate(-48deg);
+        bottom: -65px;
+        left: -105px;
+        transform: rotate(90deg);
       }
 
       &:nth-child(8) {
         position: absolute;
-        top: 275px;
-        left: -113px;
-        transform: rotate(50deg);
+        left: -50px;
+        top: 115px;
+        transform: rotate(-50deg);
       }
     }
 
     .slick-current {
       .slide_icon {
-        font-size: 50px;
+        font-size: 40px;
         transition: all linear 0.6s;
         background: #fff;
         color: $green;
+        box-shadow: 0px 0px 30px -7px rgba(0,0,0,0.15);
       }
     }
   }
@@ -632,7 +297,7 @@ section {
 
   .slide_icon {
     width: 100px;
-    height: 90px;
+    height: 65px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -844,6 +509,7 @@ section {
     }
     &.active {
       border: none;
+      background-color: transparent;
 
       .img-box {
         opacity: 1;
@@ -856,19 +522,37 @@ section {
 .SponserSlider {
   .img-box {
     padding: 20px;
-    height: 150px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex !important;
     filter: grayscale(100%);
     transition: all ease 0.3s;
     width: 100px;
     align-items: center;
+    justify-content: center;
     &:hover {
       filter: grayscale(0);
     }
     img {
-      height: 65px !important;
+      max-width: 130px;
+      max-height: 100px;
+      width: auto;
     }
+  }
+}
+
+.progress {
+  background-color: #e1eede;
+  height: 10px;
+  overflow: unset;
+  margin-bottom: 15px;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+  .progress-bar {
+    height: 4px;
+    border-radius: 4px;
+    position: relative;
+    overflow: unset;
+    margin: 0 1px;
+    background-color: #2a8a6a;
   }
 }

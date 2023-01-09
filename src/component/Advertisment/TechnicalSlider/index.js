@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import Slider from "react-slick";
+import SectionTitle from "../../SectionTitle";
 
 const TechnicalSlider = () => {
   const [nav1, setNav1] = useState();
@@ -35,6 +36,7 @@ const TechnicalSlider = () => {
 
   return (
     <Row className="align-items-center">
+    <SectionTitle title="Technical" colorText="experties" align="text-center"/>
     <Col xl={6} lg={7}>
     <Slider
         className="circle_img"

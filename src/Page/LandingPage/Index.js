@@ -9,6 +9,8 @@ import MapSection from '../../component/Map'
 import OurProjects from '../../component/Our Projects'
 import OurTeam from '../../component/OurTeam'
 import Reviews from '../../component/Reviews'
+import Services from '../../component/Services'
+import Skill from '../../component/Skill'
 import Sponser from '../../component/Sponser'
 import StatsSection from '../../component/Stats'
 import GetTouchUs from '../../component/TouchWithUs'
@@ -19,16 +21,17 @@ const LandingPage = () => {
     <Headers/>
     <Banner/>
     <main>
-    <AboutSection/>
-    <ChooseUs/>
-    <StatsSection/>
-    <AdvertismentSection/>
-    <OurTeam/>
-    <OurProjects/>
-    <Reviews/>
-    <Sponser/>
-    <GetTouchUs/>
-    <MapSection/>
+      <AboutSection/>
+      <Services/>
+      <ChooseUs/>
+      <StatsSection/>
+      <AdvertismentSection/>
+      <Skill/>
+      <OurProjects/>
+      <Sponser/>
+      <Reviews/>
+      <GetTouchUs/>
+      <MapSection/>
     </main>
     <Footer/>
     </>

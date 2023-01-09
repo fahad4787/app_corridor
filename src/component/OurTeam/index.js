@@ -10,6 +10,7 @@ const OurTeam = () => {
     <SectionTitle
     title="Meet our amazing "
     colorText='team'
+    align="text-center mb-5"
     />
     <br />
     <br />

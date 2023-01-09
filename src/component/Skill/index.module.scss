@@ -1,0 +1,25 @@
+@import "../../Style/media-mixins";
+$breakpoints: (
+	'xs-phone': 580px,
+	'phone': 640px,
+	'tablet': 768px,
+	'tablet-x': 992px,
+	'desktop': 1024px,
+	'widescreen': 1200px,
+	'widescreen-large': 1400px,
+);
+.img_group {
+  margin-right: 30px;
+ img{
+    &:first-child {
+        margin-bottom: 30px;
+      }
+ }
+}
+
+.data_holder {
+  margin-left: 125px;
+  @include media("<tablet-x"){
+    margin: 0;
+  }
+}

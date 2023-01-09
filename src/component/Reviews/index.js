@@ -8,12 +8,13 @@ import classes from "./index.module.scss";
 
 const Reviews = () => {
   return (
-    <section className="pb-0">
+    <section className="pb-0 gray-bg">
       <Container>
         <SectionTitle
           title="What our awesome"
           colorText="users say"
           des="Our clients’ trust has been our number one priority and we never compromise on this."
+          align="text-center"
         />
         <Tabs
           defaultActiveKey="0"

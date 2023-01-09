@@ -3,12 +3,13 @@ import { Row } from 'react-bootstrap'
 import EffectiveData from './EffectiveData'
 import EffectiveDetails from './EffectiveDetails'
 import classes from '../index.module.scss'
+import SectionTitle from '../../SectionTitle'
 
 const EffectivenessTab = () => {
     const [data] = useState(EffectiveData)
   return (
    <>
-   <h4 className={classes.main_heading}>Project effectiveness on diffrent stages</h4>
+   <SectionTitle title="Project effectiveness on" colorText="diffrent stages" align="text-center"/>
    <Row>
    {
     data.map((currn , ind)=>{

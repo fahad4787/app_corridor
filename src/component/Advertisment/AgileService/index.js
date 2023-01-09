@@ -1,14 +1,13 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
+import SectionTitle from "../../SectionTitle";
 import classes from "../index.module.scss";
 
 
 const AgileService = () => {
   return (
-    <section className="pb-0" style={{overflow :"visible"}}>
-      <h4 className={classes.main_heading}>
-        Agile software development approch.
-      </h4>
+    <section className="p-0" style={{overflow :"visible"}}>
+   <SectionTitle title="Agile software" colorText="development approch" align="text-center"/>
       <Row className="counter-list">
         <Col xl={4} md={6} className={classes.box1} >
           <div class="box bg">

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import logo from "../../../Images/logo.svg";
 import logo2 from "../../../Images/logo-white.svg";
+import classes from "../index.module.scss"
 const MainHeader = () => {
 
   const [navBar,setNavbar] = useState(false)
@@ -19,18 +20,18 @@ const MainHeader = () => {
   
   return (
     <>
-    <Navbar expand="lg" className={navBar? 'nav_active': 'mainHeader'}>
+    <Navbar expand="lg" className={navBar? classes.header : classes.mainHeader}>
     <Container>
-      <Navbar.Brand className="logo" href="#home"><img src={logo} alt="logo" /></Navbar.Brand>
-      <Navbar.Brand className="logo1" href="#home"><img src={logo2} alt="logo" /></Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav" className="navBar">
-      <Navbar.Brand href="#home" className="tablet-icon"><img src={logo} alt="logo" /></Navbar.Brand>
-        <Nav className="justify-content-end align-items-center w-100">
+      <Navbar.Brand className={classes.logo} href="#home"><img src={logo} alt="logo" /></Navbar.Brand>
+      <Navbar.Brand className={classes.logo1} href="#home"><img src={logo2} alt="logo" /></Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" className={classes.toggler} />
+      <Navbar.Collapse id="basic-navbar-nav" className={classes.navBar}>
+      <Navbar.Brand href="#home" className={classes.tablet_icon}><img src={logo} alt="logo" /></Navbar.Brand>
+        <Nav className={ `${classes.navBar_nav} justify-content-end align-items-center w-100`}>
           <Nav.Link href="#home">Home</Nav.Link>
           <Nav.Link href="#link">About</Nav.Link>
-          <NavDropdown title="Service" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+          <NavDropdown title="Service" id="basic-nav-dropdown" className={classes.dropdown}>
+            <NavDropdown.Item className={classes.dropdown} href="#action/3.1">Action</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">
               Another action
             </NavDropdown.Item>
@@ -44,7 +45,7 @@ const MainHeader = () => {
           <Nav.Link href="#home">Portofolio</Nav.Link>
           <Nav.Link href="#home">Blog</Nav.Link>
           <Nav.Link href="#home">Contact</Nav.Link>
-          <Button variant="outline-primary"  className="btn">Download</Button>
+          <Button variant="outline-primary"  className={classes.btn}>Download</Button>
         </Nav>
       </Navbar.Collapse>
     </Container>

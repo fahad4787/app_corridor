@@ -1,0 +1,226 @@
+@import "../../Style/media-mixins";
+@import "../../Style/variables";
+$breakpoints: (
+  "xs-phone": 580px,
+  "phone": 640px,
+  "tablet": 768px,
+  "tablet-x": 992px,
+  "desktop": 1024px,
+  "widescreen": 1200px,
+  "widescreen-large": 1400px,
+);
+
+.toggler {
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+.header {
+  position: fixed !important;
+  top: 0;
+  background-color: #fff;
+  z-index: 9999;
+  width: 100%;
+  transition: all ease-in-out 0.3s;
+  .logo1 {
+    display: none;
+  }
+  .navBar {
+    .dropdown {
+      @include media("<tablet-x") {
+        width: 100%;
+        >div{
+          a{
+            border: none;
+          }
+        }
+      }
+    }
+    a {
+      padding: 12px 20px !important;
+      font-size: 12px;
+      font-weight: 400;
+      color: #000 !important;
+      text-transform: uppercase;
+      position: relative;
+      &:before {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 0;
+        background-color: #2a8a6a;
+        transition: all ease-in-out 0.3s;
+        z-index: -1;
+      }
+      &:hover {
+        color: #fff !important;
+        z-index: 1;
+        &:before {
+          width: 100%;
+          transition: all ease-in-out 0.3s;
+        }
+      }
+    }
+
+    .btn{
+      border: 1px solid #2a8a6a;
+      color: $green;
+      border-radius: 30px;
+      padding: 0 30px;
+      margin-left: 20px;
+      @include media("<tablet-x") {
+        margin: 20px auto;
+      }
+      &:hover {
+        background-color: #2a8a6a;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.mainHeader {
+  background: transparent;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  color: #fff;
+  transition: all ease-in-out 0.3s;
+  @include media("<tablet-x") {
+    background-color: #fff;
+  }
+
+  .logo {
+    display: none;
+    @include media("<tablet-x") {
+      display: block;
+    }
+  }
+
+  .logo1 {
+    @include media("<tablet-x") {
+      display: none;
+    }
+  }
+
+  .navBar {
+    .dropdown {
+      @include media("<tablet-x") {
+        width: 100%;
+        >div{
+          a{
+            border: none;
+          }
+        }
+      }
+      > div {
+        a {
+          color: $green !important;
+          &:hover {
+            color: #fff !important;
+          }
+        }
+      }
+    }
+    a {
+      padding: 12px 20px !important;
+      font-size: 12px;
+      color: #fff !important;
+      text-transform: uppercase;
+      position: relative;
+      @include media("<tablet-x") {
+        color: $green !important;
+      }
+      &:before {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 0;
+        background-color: #2a8a6a;
+        transition: all ease-in-out 0.3s;
+        z-index: -1;
+      }
+      &:hover {
+        color: #fff !important;
+        z-index: 1;
+        &:before {
+          width: 100%;
+          transition: all ease-in-out 0.3s;
+        }
+      }
+    }
+
+    .btn {
+      border: 1px solid #2a8a6a;
+      color: #fff;
+      border-radius: 30px;
+      padding: 0 30px;
+      margin-left: 20px;
+      @include media("<tablet-x") {
+        color: $green !important;
+        margin: 20px auto;
+      }
+      &:hover {
+        background-color: #2a8a6a;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.navBar {
+  .tablet_icon {
+    display: none;
+  }
+  @include media("<tablet-x") {
+    position: fixed;
+    width: 230px;
+    top: 0px;
+    background: rgb(255, 255, 255);
+    left: 0px;
+    bottom: 0px;
+    left: -250px;
+    transition: all ease-in-out 0.6s;
+    overflow-y: auto;
+    flex-grow: unset;
+    flex-basis: unset;
+    height: 100vh;
+    padding: 20px 0;
+    display: block !important;
+    border-right: 1px solid #cacaca;
+    &[class*="show"] {
+      left: 0;
+      transition: all ease-in-out 0.6s;
+      height: 100vh;
+    }
+    .tablet_icon {
+      display: block;
+      &:hover {
+        &:before {
+          width: 0 !important;
+        }
+      }
+    }
+
+    .navBar_nav {
+      align-items: flex-start !important;
+      a {
+        width: 100%;
+        border-bottom: 1px solid #cacaca;
+      }
+
+      button {
+        margin: 15px 0;
+      }
+    }
+  }
+}

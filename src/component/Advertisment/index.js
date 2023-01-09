@@ -7,16 +7,17 @@ import agile from "../../Images/agile.png";
 import EffectivenessTab from "./Effectiveness";
 import TechnicalSlider from "./TechnicalSlider";
 import AgileService from "./AgileService";
+import classes from "./index.module.scss"
 
 const AdvertismentSection = () => {
   return (
     <section>
       <Container>
-        <SectionTitle title="Our company has" colorText="everything" />
+        <SectionTitle title="Our company has" colorText="everything" align="text-center" />
         <Tabs
           defaultActiveKey="0"
           id="uncontrolled-tab-example"
-          className='my-5 advertisement_tabs'
+          className={`my-5 ${classes.advertisement_tabs}`}
         >
           <Tab eventKey="0" title="Technical Experties">
             <TechnicalSlider/>

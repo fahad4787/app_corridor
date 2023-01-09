@@ -13,8 +13,7 @@ const EffectiveData = [
         one: 'Team',
         two: 'Google Meet',
         three: 'Slack',
-        four: 'Zoom',
-        five: 'Skype',
+        
     },
 
 

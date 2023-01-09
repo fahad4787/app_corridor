@@ -11,6 +11,7 @@ const StatsSection = () => {
     title='Some cool stats about'
     colorText='our company'
     des=""
+    align='text-center mb-5'
     />
 
     <StatsCards/>

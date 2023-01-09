@@ -9,6 +9,7 @@ const GetTouchUs = () => {
       <SectionTitle
       title="Get in touch"
       colorText='with us'
+      align="text-center"
       />
 
         <Form className="my-5 p-5 rounded shadow touch_us_form">

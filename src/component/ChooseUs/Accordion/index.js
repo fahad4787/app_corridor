@@ -1,9 +1,9 @@
 import React from "react";
 import { Accordion } from "react-bootstrap";
-
+import classes from "../index.module.scss"
 const AccrodionSection = () => {
   return (
-    <Accordion className="my-5">
+    <Accordion className={classes.accordion}>
       <Accordion.Item eventKey="0">
         <Accordion.Header>
         <i class="fa-solid fa-people-roof"></i>ITO & Managed Services

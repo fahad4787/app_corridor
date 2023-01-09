@@ -5,7 +5,7 @@ import Title from './Title';
 
 const SectionTitle = (props) => {
   return (
-    <div className={classes.sectin_title}>
+    <div className={`${props.align} ${classes.section_title}`}>
     <Title {...props}/>
     <p>{props.des}</p>
     </div>

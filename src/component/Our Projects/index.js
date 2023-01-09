@@ -1,10 +1,10 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import Slider from "react-slick";
-import project1 from "../../Images/project1.png";
-import project2 from "../../Images/project2.png";
-import project3 from "../../Images/project3.png";
-import project4 from "../../Images/project4.png";
+import project1 from "../../Images/project1.jpg";
+import project2 from "../../Images/project2.jpg";
+import project3 from "../../Images/project3.jpg";
+import project4 from "../../Images/project4.jpg";
 import SectionTitle from "../SectionTitle";
 
 const OurProjects = () => {
@@ -35,8 +35,8 @@ const OurProjects = () => {
   };
   return (
     <section className="gray-bg">
-      <SectionTitle title="Our" colorText="projects" />
-      <Container>
+    <Container>
+    <SectionTitle title="Our" colorText="projects" align="text-center mb-5"/>
         <Slider className="ProjectSlider" {...settings}>
           <div>
             <a className="card" href="">
@@ -51,7 +51,7 @@ const OurProjects = () => {
                   simplifies your work and life by becoming the personal
                   assistant you never knew you needed! Get automatic and
                   seamless notifications of workflow and activities across all
-                  your connected platforms.{" "}
+                  your connected platforms.
                 </p>
               </div>
             </a>

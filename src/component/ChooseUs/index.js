@@ -12,10 +12,10 @@ const ChooseUs = () => {
   return (
     <section className='skin-bg'>
     <Container>
-    <Row className='align-items-center mb-5'>
+    <Row className='mb-5 flex-lg-row flex-column-reverse'>
     <Col lg={6} md={12} >
     <SectionTitle  title="Why choose"
-    colorText=" app corridor"/>
+    colorText=" app corridor" align="text-lg-start text-center"/>
     <ChooseList/>
     </Col>
     <Col lg={6} md={12}>
@@ -24,12 +24,12 @@ const ChooseUs = () => {
     </Row>
 
     <Row>
-    <Col lg={6} md={12} className="mb-5">
+    <Col lg={6} md={12}>
     <SideImage img={mission}/>
     </Col>
     <Col lg={6} md={12}>
     <SectionTitle  title="Our"
-    colorText="Services"/>
+    colorText="Services" align='text-center'/>
    <AccrodionSection/>
     </Col>
     </Row>

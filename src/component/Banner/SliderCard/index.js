@@ -1,10 +1,11 @@
 import React from 'react'
+import classes from "../index.module.scss"
 
 const SliderCard = (props) => {
   return (
-    <div className="banner-holder">
-      <div className="banner-sec">
-        <div className="banner-text text-center mb-5">
+    <div className={classes.banner_holder}>
+      <div className={classes.banner_sec}>
+        <div className={`${classes.banner_text} text-center mb-5`}>
           {props.Stext}
           <span>{props.colorText}</span>
           {props.EText}

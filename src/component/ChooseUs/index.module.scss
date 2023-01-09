@@ -1,13 +1,15 @@
+@import "../../Style/variables";
 .list {
-    padding: 20px 0;
+  padding: 0;
   list-style: none;
-  line-height: 25px;
-  font-size: 16px;
+  line-height: 20px;
+  font-size: 14px;
   li {
     position: relative;
     padding-left: 15px;
-    p{
-      margin-bottom: 5px;
+    h6 {
+      font-weight: 500;
+      letter-spacing: -0.28px;
     }
     &:after {
       position: absolute;
@@ -21,7 +23,39 @@
       border-bottom: 3px solid #2a8a6a;
       border-left: 3px solid #2a8a6a;
       transform: rotate(-35deg);
-  
     }
   }
 }
+
+.accordion {
+  [class*="accordion-button"] {
+    background-color: $green !important;
+    color: #fff !important;
+    font-size: 14px;
+    &:after {
+      background-color: #fff !important;
+      border-radius: 50%;
+    }
+    i {
+      color: #fff !important;
+    }
+    &[class*="collapsed"] {
+      background-color: #fff !important;
+      color: #000 !important;
+      i {
+        color: $green !important;
+      }
+    }
+    &:focus {
+      border-color: transparent !important;
+      box-shadow: none !important;
+    }
+    i {
+      color: $green;
+      font-size: 18px;
+      margin-right: 15px;
+    }
+  }
+}
+
+

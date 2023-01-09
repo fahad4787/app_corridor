@@ -1,0 +1,78 @@
+@import "../../Style/media-mixins";
+@import "../../Style/variables";
+$breakpoints: (
+	'xs-phone': 580px,
+	'phone': 640px,
+	'tablet': 768px,
+	'tablet-x': 992px,
+	'desktop': 1024px,
+	'widescreen': 1200px,
+	'widescreen-large': 1400px,
+);
+
+.banner {
+    position: relative;
+    background-image: url(../../Images/banner-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #0a271e;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+    counter-reset: my-sec-counter;
+    @include media("<tablet-x") {
+      padding: 0 15px 0 15px;
+    }
+    .banner_holder{
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+      align-items: center;
+      padding: 100px 15px;
+  
+      .banner_sec {
+        position: relative;
+        overflow: hidden;
+      }
+    
+    }
+    
+    .img-box {
+      width: 600px;
+      margin: auto;
+      transform: translateY(100vh);
+      @include media("<tablet") {
+        width: 100%;
+        padding: 0 20px;
+      }
+    }
+  
+    .banner_text {
+      text-align: center;
+      margin: 0 auto;
+      font-size: 26px;
+      color: #fff;
+      font-weight: 700;
+      width: 600px;
+      max-width: 100%;
+      letter-spacing: -0.01em;
+      line-height: 39px;
+      @include media("<tablet-x") {
+        font-size: 32px;
+        line-height: 40px;
+      }
+      @include media("<tablet") {
+        font-size: 18px;
+        line-height: 25px;
+      }
+      span {
+        color: $green;
+      }
+    }
+  }
+
+ 

@@ -1,13 +1,69 @@
-.main_heading {
-  // color: #2a8a6a;
-  font-size: 40px;
-  color: #000;
-  opacity: 0;
-  transform: translateY(-100px);
-  text-align: center;
+@import "../../Style/media-mixins";
+@import "../../Style/variables";
+$breakpoints: (
+	'xs-phone': 580px,
+	'phone': 640px,
+	'tablet': 768px,
+	'tablet-x': 992px,
+	'desktop': 1024px,
+	'widescreen': 1200px,
+	'widescreen-large': 1400px,
+);
 
+.advertisement_tabs {
+  justify-content: center;
+  border-bottom: none !important;
+
+  @include media("<phone") {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+    [class*="nav-item"] {
+      flex: 1 0 auto;
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+  @include media("<xs-phone") {
+    justify-content: flex-start;
+  }
+
+  [class*="nav-item"] {
+    button {
+      border: none;
+      background-color: #000;
+      color: #fff;
+      border-radius: 0;
+      padding: 20px 40px;
+      font-size: 20px;
+      position: relative;
+      @include media("<tablet-x") {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+      &:after {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 0;
+        border-bottom: 5px solid $green;
+        transition: all ease-in-out 0.3s;
+      }
+      &[class*="active"] {
+        background-color: #000;
+        color: #fff;
+        &:after {
+          width: 100%;
+          transition: all ease-in-out 0.3s;
+        }
+      }
+    }
+  }
 }
-
 .card {
     background: #fff;
     padding: 15px 30px;
@@ -23,17 +79,17 @@
   .number {
     font-size: 34px;
     color: #fff;
-    padding: 30px;
-    border: 10px solid #fff;
+    padding: 20px;
+    border: 5px solid #fff;
     border-radius: 50%;
     margin: 0;
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #2a8a61;
-    outline: 8px solid #2a8a61;
+    outline: 4px solid #2a8a61;
     margin: 20px 0;
   }
 

@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import { useState } from "react";
 import BannerData from "./BannerData";
 import SliderCard from "./SliderCard";
+import classes from './index.module.scss'
 
 
 
@@ -28,9 +29,9 @@ const Banner = () => {
     ],
   };
   return (
-    <div className="banner">
+    <div className={classes.banner}>
       <Container>
-        <Slider className="banner-slider" {...settings}>
+        <Slider className="banner_slider" {...settings}>
          
           {
             data.map((currn, ind)=>{

@@ -2,7 +2,7 @@
     padding: 80px 0;
     text-align: center;
     width: 85%;
-    margin: 50px auto;
+    margin: 0px auto;
     border-top: 3px solid #2a8a6a;
     transition: all linear 0.3s;
     &:hover{
@@ -17,9 +17,15 @@
     color: #2a8a6a;
   }
   p {
-    font-size: 20px;
+    font-size: 16px;
     color: #b1b1b1;
     font-weight: 500;
     margin: 0;
   }
+}
+
+@media screen and (max-width: 991px) {
+.statsCard{
+  margin-bottom:30px;
+}
 }
