@@ -1,0 +1,56 @@
+@import "../../Style/variables";
+@import "../../Style/media-mixins";
+$breakpoints: (
+	'xs-phone': 580px,
+	'phone': 640px,
+	'tablet': 768px,
+	'tablet-x': 992px,
+	'desktop': 1024px,
+	'widescreen': 1200px,
+	'widescreen-large': 1400px,
+);
+
+.touch_bg {
+  background-image: url(../../Images/skin-3.jpg);
+  background-size: 100% 65%;
+  background-position: center 155px;
+  background-repeat: no-repeat;
+  .touch_us {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px -7px rgba(0, 0, 0, 0.15);
+
+    .btn_group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include media("<xs-phone"){
+        flex-direction: column;
+        gap: 10px;
+      }
+      .btn {
+        display: block;
+        margin: 0 10px;
+        max-width: 135px;
+        width: 100%;
+        text-decoration: none;
+        text-align: center;
+        background-color: $green;
+        padding: 12px 18px;
+        color: #fff;
+        border-radius: 8px;
+        transition: all ease 0.3s;
+        border: 1px solid transparent;
+        &:hover {
+          background-color: #fff;
+          color: $green;
+          border: 1px solid $green;
+          transition: all ease 0.3s;
+        }
+      }
+    }
+  }
+}

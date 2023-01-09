@@ -1,23 +1,58 @@
+@import "../../Style/media-mixins";
+@import "../../Style/variables";
+$breakpoints: (
+	'xs-phone': 580px,
+	'phone': 640px,
+	'tablet': 768px,
+	'tablet-x': 992px,
+	'desktop': 1024px,
+	'widescreen': 1200px,
+	'widescreen-large': 1400px,
+);
+
 .footer {
-  padding: 90px 0;
+  background-color: #f7f7f7;
+  .footer_sec {
+    padding: 90px 0;
+    @include media("<tablet") {
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    @include media("<xs-phone") {
+      text-align: start;
+    }
+
+    .col{
+      flex: 0 0 75%;
+    }
+  }
 
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
-
+    @include media("<xs-phone"){
+      text-align: start;
+    }
     li {
       display: block;
       a {
         font-size: 14px;
-        letter-spacing: .01em;
+        letter-spacing: 0.01em;
         text-decoration: none;
         color: #000;
         line-height: 25px;
-        margin-bottom: 15px;
-        display: block;
+        margin-bottom: 20px;
+        display: inline-block;
         position: relative;
         transition: all ease-in-out 0.3s;
+        @include media("<xs-phone"){
+          margin-bottom: 10px;
+        }
+        @include media("<tablet") {
+          font-size: 12px;
+        }
         &::after {
           position: absolute;
           content: "";
@@ -42,17 +77,45 @@
   }
 }
 
-@media screen and (max-width: 676px) {
-  .footer {
-    padding: 50px 0;
-    text-align: center;
+.contact_us_list {
+  li {
+    display: flex !important;
+    align-items: center;
+    margin: 8px 0;
 
-    ul {
-      li {
-        a {
-          font-size: 14px;
-        }
+    a {
+      margin: 0 0 0px 0 !important;
+      &:hover {
+        padding-left: 0px !important;
+      }
+      &:after {
+        display: none;
+      }
+      i {
+        font-size: 14px;
+        color: #2a8a6a;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        margin-right: 12px;
+        background: rgba(42, 138, 106, 0.1);
+        border-radius: 0 10px;
       }
     }
+  }
+}
+.copyright_footer {
+  background-color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  color: $green;
+  font-weight: 500;
+  font-size: 12px;
+  @include media("<xs-phone"){
+    font-size: 10px;
+  }
+  p {
+    margin-bottom: 0;
   }
 }

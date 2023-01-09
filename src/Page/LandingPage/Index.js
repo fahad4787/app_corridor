@@ -25,13 +25,12 @@ const LandingPage = () => {
       <Services/>
       <ChooseUs/>
       <StatsSection/>
-      <AdvertismentSection/>
       <Skill/>
+      <AdvertismentSection/>
       <OurProjects/>
       <Sponser/>
       <Reviews/>
       <GetTouchUs/>
-      <MapSection/>
     </main>
     <Footer/>
     </>

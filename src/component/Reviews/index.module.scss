@@ -41,12 +41,12 @@
 .content_wrapper{
   position: relative;
   i{
-    top: -35px;
+    top: -20px;
     position: absolute;
-    font-size: 280px;
+    font-size: 200px;
     left: 50%;
     color: #f7f7f7;
-    margin-left: -195px;
+    margin-left: -165px;
     text-shadow: 0 9px 94px rgb(106 180 0 / 45%);
     z-index: 0;
     &:before{
@@ -78,6 +78,8 @@
     padding: 40px 0;
     position: relative;
     z-index: 1;
+    height: 100px;
+    min-height: 200px;
   }
 }
 

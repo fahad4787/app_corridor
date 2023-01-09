@@ -8,7 +8,7 @@ import SectionTitle from "../SectionTitle";
 
 const Skill = () => {
   return (
-    <section className="skin-bg">
+    <section className="skinReverse-bg">
       <Container>
         <SectionTitle
           title="We Are Increasing Business"
